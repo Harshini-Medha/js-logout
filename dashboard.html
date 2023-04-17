@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <section class="w-full h-screen ">
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">WPT Tech</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 text-blue-600">About US</a>
+        <a class="mr-5 text-blue-600">Home</a>
+        <a class="mr-5 text-blue-600">Contact US</a>
+        <a class="mr-5 text-blue-600">Others</a>
+      </nav>
+      <button id="but" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 border-2 border-blue-500 hover:bg-gray-200 rounded text-base mt-4 md:mt-0" onclick="Logout()">Logout
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <section class="text-gray-600 body-font">
+
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+      <span class="font-bold text-blue-600 text-[30px] mb-[20px] justify-center flex items-center  "> WPT Technologies Private ltd</span>
+      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="./tech.jpg">
+     </div>
+  </section>
+</section>
+<script>
+
+function Logout(){
+localStorage.clear()
+window.location.href=('http://127.0.0.1:5500/index.html')
+
+}
+
+
+
+function Verify(){
+console.log(localStorage.user)
+let n =localStorage.getItem('user')
+console.log(n)
+
+if(localStorage.user){
+
+}
+else{
+
+
+  window.location.href=('http://127.0.0.1:5500/index.html')
+}
+
+
+
+}
+
+Verify()
+
+
+
+
+</script>
+</body>
+</html>
